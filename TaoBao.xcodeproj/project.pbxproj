@@ -7,15 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1072783A3EF1C21758B40841 /* Pods_TaoBao.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67AAD4B2F9CD2CB4995B80A1 /* Pods_TaoBao.framework */; };
 		6ED32181216EDCC30053A90E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED32180216EDCC30053A90E /* AppDelegate.swift */; };
 		6ED32183216EDCC30053A90E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED32182216EDCC30053A90E /* ViewController.swift */; };
 		6ED32186216EDCC30053A90E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6ED32184216EDCC30053A90E /* Main.storyboard */; };
 		6ED32189216EDCC30053A90E /* TaoBao.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6ED32187216EDCC30053A90E /* TaoBao.xcdatamodeld */; };
 		6ED3218B216EDCC50053A90E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6ED3218A216EDCC50053A90E /* Assets.xcassets */; };
 		6ED3218E216EDCC50053A90E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6ED3218C216EDCC50053A90E /* LaunchScreen.storyboard */; };
+		6ED321AD216EDD190053A90E /* BaseBottomButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED32197216EDD190053A90E /* BaseBottomButtonViewController.swift */; };
+		6ED321AE216EDD190053A90E /* BaseNewPopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED32198216EDD190053A90E /* BaseNewPopView.swift */; };
+		6ED321AF216EDD190053A90E /* BasePopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED32199216EDD190053A90E /* BasePopView.swift */; };
+		6ED321B0216EDD190053A90E /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED3219A216EDD190053A90E /* BaseTableViewController.swift */; };
+		6ED321B1216EDD190053A90E /* BaseTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED3219B216EDD190053A90E /* BaseTextView.swift */; };
+		6ED321B2216EDD190053A90E /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED3219C216EDD190053A90E /* PickerView.swift */; };
+		6ED321B3216EDD190053A90E /* TableCellDelegater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED3219D216EDD190053A90E /* TableCellDelegater.swift */; };
+		6ED321B4216EDD190053A90E /* TableCellProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED3219E216EDD190053A90E /* TableCellProvider.swift */; };
+		6ED321B5216EDD190053A90E /* tableViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED3219F216EDD190053A90E /* tableViewUtils.swift */; };
+		6ED321B8216EDD190053A90E /* fileExtence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED321A4216EDD190053A90E /* fileExtence.swift */; };
+		6ED321B9216EDD190053A90E /* GlobalVariable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED321A5216EDD190053A90E /* GlobalVariable.swift */; };
+		6ED321BA216EDD190053A90E /* LateralSpreadsMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED321A7216EDD190053A90E /* LateralSpreadsMenuViewController.swift */; };
+		6ED321BB216EDD190053A90E /* LCycleADView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED321A8216EDD190053A90E /* LCycleADView.swift */; };
+		6ED321BC216EDD190053A90E /* PromptInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED321A9216EDD190053A90E /* PromptInformation.swift */; };
+		6ED321BD216EDD190053A90E /* UIViewController+LLSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED321AB216EDD190053A90E /* UIViewController+LLSwizzle.m */; };
+		6ED321BE216EDD190053A90E /* validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED321AC216EDD190053A90E /* validation.swift */; };
+		6EF2C2CF216EDF5F00FB8F7F /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF2C2CE216EDF5F00FB8F7F /* MainTabBarViewController.swift */; };
+		6EF2C2D6216EF46F00FB8F7F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF2C2D5216EF46F00FB8F7F /* MainViewController.swift */; };
+		6EF2C2DB216F1A4800FB8F7F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF2C2D9216F1A4800FB8F7F /* LoginViewController.swift */; };
+		6EF2C2DC216F1A4800FB8F7F /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EF2C2DA216F1A4800FB8F7F /* LoginViewController.xib */; };
+		6EF2C2DF216F2E5400FB8F7F /* HomePageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF2C2DE216F2E5400FB8F7F /* HomePageTableViewController.swift */; };
+		6EF2C2E4216F2F8300FB8F7F /* HomePageShufflingImgTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF2C2E2216F2F8300FB8F7F /* HomePageShufflingImgTableViewCell.swift */; };
+		6EF2C2E5216F2F8300FB8F7F /* HomePageShufflingImgTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EF2C2E3216F2F8300FB8F7F /* HomePageShufflingImgTableViewCell.xib */; };
+		6EF2C2E7216F340F00FB8F7F /* LunBo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF2C2E6216F340F00FB8F7F /* LunBo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		67AAD4B2F9CD2CB4995B80A1 /* Pods_TaoBao.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaoBao.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6ED3217D216EDCC30053A90E /* TaoBao.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaoBao.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6ED32180216EDCC30053A90E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6ED32182216EDCC30053A90E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +50,34 @@
 		6ED3218A216EDCC50053A90E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6ED3218D216EDCC50053A90E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6ED3218F216EDCC50053A90E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6ED32197216EDD190053A90E /* BaseBottomButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseBottomButtonViewController.swift; sourceTree = "<group>"; };
+		6ED32198216EDD190053A90E /* BaseNewPopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNewPopView.swift; sourceTree = "<group>"; };
+		6ED32199216EDD190053A90E /* BasePopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePopView.swift; sourceTree = "<group>"; };
+		6ED3219A216EDD190053A90E /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
+		6ED3219B216EDD190053A90E /* BaseTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTextView.swift; sourceTree = "<group>"; };
+		6ED3219C216EDD190053A90E /* PickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
+		6ED3219D216EDD190053A90E /* TableCellDelegater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableCellDelegater.swift; sourceTree = "<group>"; };
+		6ED3219E216EDD190053A90E /* TableCellProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableCellProvider.swift; sourceTree = "<group>"; };
+		6ED3219F216EDD190053A90E /* tableViewUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tableViewUtils.swift; sourceTree = "<group>"; };
+		6ED321A4216EDD190053A90E /* fileExtence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fileExtence.swift; sourceTree = "<group>"; };
+		6ED321A5216EDD190053A90E /* GlobalVariable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalVariable.swift; sourceTree = "<group>"; };
+		6ED321A6216EDD190053A90E /* KOA-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KOA-Bridging-Header.h"; sourceTree = "<group>"; };
+		6ED321A7216EDD190053A90E /* LateralSpreadsMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LateralSpreadsMenuViewController.swift; sourceTree = "<group>"; };
+		6ED321A8216EDD190053A90E /* LCycleADView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LCycleADView.swift; sourceTree = "<group>"; };
+		6ED321A9216EDD190053A90E /* PromptInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromptInformation.swift; sourceTree = "<group>"; };
+		6ED321AA216EDD190053A90E /* UIViewController+LLSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+LLSwizzle.h"; sourceTree = "<group>"; };
+		6ED321AB216EDD190053A90E /* UIViewController+LLSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+LLSwizzle.m"; sourceTree = "<group>"; };
+		6ED321AC216EDD190053A90E /* validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = validation.swift; sourceTree = "<group>"; };
+		6EF2C2CE216EDF5F00FB8F7F /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		6EF2C2D5216EF46F00FB8F7F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		6EF2C2D9216F1A4800FB8F7F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		6EF2C2DA216F1A4800FB8F7F /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		6EF2C2DE216F2E5400FB8F7F /* HomePageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageTableViewController.swift; sourceTree = "<group>"; };
+		6EF2C2E2216F2F8300FB8F7F /* HomePageShufflingImgTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageShufflingImgTableViewCell.swift; sourceTree = "<group>"; };
+		6EF2C2E3216F2F8300FB8F7F /* HomePageShufflingImgTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomePageShufflingImgTableViewCell.xib; sourceTree = "<group>"; };
+		6EF2C2E6216F340F00FB8F7F /* LunBo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunBo.swift; sourceTree = "<group>"; };
+		98421E3B67005AF76BF6B92B /* Pods-TaoBao.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaoBao.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TaoBao/Pods-TaoBao.debug.xcconfig"; sourceTree = "<group>"; };
+		BBAFE225CBFCEA174CC8483E /* Pods-TaoBao.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaoBao.release.xcconfig"; path = "Pods/Target Support Files/Pods-TaoBao/Pods-TaoBao.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1072783A3EF1C21758B40841 /* Pods_TaoBao.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +97,8 @@
 			children = (
 				6ED3217F216EDCC30053A90E /* TaoBao */,
 				6ED3217E216EDCC30053A90E /* Products */,
+				E3AA7AFCF9C0A188B664E68B /* Pods */,
+				D0A89191624F83514389003C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,8 +113,12 @@
 		6ED3217F216EDCC30053A90E /* TaoBao */ = {
 			isa = PBXGroup;
 			children = (
-				6ED32180216EDCC30053A90E /* AppDelegate.swift */,
+				6EF2C2DD216F2E2900FB8F7F /* HomePage */,
+				6EF2C2D8216F1A2000FB8F7F /* Login */,
+				6EF2C2D0216EED1E00FB8F7F /* Main */,
+				6ED32195216EDD190053A90E /* Tool */,
 				6ED32182216EDCC30053A90E /* ViewController.swift */,
+				6ED32180216EDCC30053A90E /* AppDelegate.swift */,
 				6ED32184216EDCC30053A90E /* Main.storyboard */,
 				6ED3218A216EDCC50053A90E /* Assets.xcassets */,
 				6ED3218C216EDCC50053A90E /* LaunchScreen.storyboard */,
@@ -67,6 +128,101 @@
 			path = TaoBao;
 			sourceTree = "<group>";
 		};
+		6ED32195216EDD190053A90E /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				6ED32196216EDD190053A90E /* Base */,
+				6ED321A4216EDD190053A90E /* fileExtence.swift */,
+				6ED321A5216EDD190053A90E /* GlobalVariable.swift */,
+				6ED321A6216EDD190053A90E /* KOA-Bridging-Header.h */,
+				6ED321A7216EDD190053A90E /* LateralSpreadsMenuViewController.swift */,
+				6ED321A8216EDD190053A90E /* LCycleADView.swift */,
+				6ED321A9216EDD190053A90E /* PromptInformation.swift */,
+				6ED321AA216EDD190053A90E /* UIViewController+LLSwizzle.h */,
+				6ED321AB216EDD190053A90E /* UIViewController+LLSwizzle.m */,
+				6ED321AC216EDD190053A90E /* validation.swift */,
+				6EF2C2E6216F340F00FB8F7F /* LunBo.swift */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		6ED32196216EDD190053A90E /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				6ED32197216EDD190053A90E /* BaseBottomButtonViewController.swift */,
+				6ED32198216EDD190053A90E /* BaseNewPopView.swift */,
+				6ED32199216EDD190053A90E /* BasePopView.swift */,
+				6ED3219A216EDD190053A90E /* BaseTableViewController.swift */,
+				6ED3219B216EDD190053A90E /* BaseTextView.swift */,
+				6ED3219C216EDD190053A90E /* PickerView.swift */,
+				6ED3219D216EDD190053A90E /* TableCellDelegater.swift */,
+				6ED3219E216EDD190053A90E /* TableCellProvider.swift */,
+				6ED3219F216EDD190053A90E /* tableViewUtils.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		6EF2C2D0216EED1E00FB8F7F /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				6EF2C2D5216EF46F00FB8F7F /* MainViewController.swift */,
+				6EF2C2CE216EDF5F00FB8F7F /* MainTabBarViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		6EF2C2D8216F1A2000FB8F7F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				6EF2C2D9216F1A4800FB8F7F /* LoginViewController.swift */,
+				6EF2C2DA216F1A4800FB8F7F /* LoginViewController.xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		6EF2C2DD216F2E2900FB8F7F /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				6EF2C2E1216F2F1200FB8F7F /* view */,
+				6EF2C2E0216F2F0600FB8F7F /* vc */,
+			);
+			path = HomePage;
+			sourceTree = "<group>";
+		};
+		6EF2C2E0216F2F0600FB8F7F /* vc */ = {
+			isa = PBXGroup;
+			children = (
+				6EF2C2DE216F2E5400FB8F7F /* HomePageTableViewController.swift */,
+			);
+			path = vc;
+			sourceTree = "<group>";
+		};
+		6EF2C2E1216F2F1200FB8F7F /* view */ = {
+			isa = PBXGroup;
+			children = (
+				6EF2C2E2216F2F8300FB8F7F /* HomePageShufflingImgTableViewCell.swift */,
+				6EF2C2E3216F2F8300FB8F7F /* HomePageShufflingImgTableViewCell.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		D0A89191624F83514389003C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				67AAD4B2F9CD2CB4995B80A1 /* Pods_TaoBao.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E3AA7AFCF9C0A188B664E68B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				98421E3B67005AF76BF6B92B /* Pods-TaoBao.debug.xcconfig */,
+				BBAFE225CBFCEA174CC8483E /* Pods-TaoBao.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +230,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6ED32192216EDCC50053A90E /* Build configuration list for PBXNativeTarget "TaoBao" */;
 			buildPhases = (
+				CD33B52C92714DC4BC1CFB3F /* [CP] Check Pods Manifest.lock */,
 				6ED32179216EDCC30053A90E /* Sources */,
 				6ED3217A216EDCC30053A90E /* Frameworks */,
 				6ED3217B216EDCC30053A90E /* Resources */,
+				002554A6B95719660E1C1912 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,22 +283,125 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EF2C2DC216F1A4800FB8F7F /* LoginViewController.xib in Resources */,
 				6ED3218E216EDCC50053A90E /* LaunchScreen.storyboard in Resources */,
 				6ED3218B216EDCC50053A90E /* Assets.xcassets in Resources */,
 				6ED32186216EDCC30053A90E /* Main.storyboard in Resources */,
+				6EF2C2E5216F2F8300FB8F7F /* HomePageShufflingImgTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		002554A6B95719660E1C1912 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TaoBao/Pods-TaoBao-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/BMPlayer/BMPlayer.framework",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
+				"${BUILT_PRODUCTS_DIR}/DKImagePickerController/DKImagePickerController.framework",
+				"${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework",
+				"${BUILT_PRODUCTS_DIR}/FSCalendar/FSCalendar.framework",
+				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SKPhotoBrowser/SKPhotoBrowser.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftRichString/SwiftRichString.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyUserDefaults/SwiftyUserDefaults.framework",
+				"${BUILT_PRODUCTS_DIR}/WMPlayer/WMPlayer.framework",
+				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
+				"${BUILT_PRODUCTS_DIR}/ZFPlayer/ZFPlayer.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BMPlayer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaAsyncSocket.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DKImagePickerController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DZNEmptyDataSet.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSCalendar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SKPhotoBrowser.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftRichString.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyUserDefaults.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WMPlayer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZFPlayer.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TaoBao/Pods-TaoBao-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD33B52C92714DC4BC1CFB3F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TaoBao-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6ED32179216EDCC30053A90E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EF2C2D6216EF46F00FB8F7F /* MainViewController.swift in Sources */,
+				6ED321B1216EDD190053A90E /* BaseTextView.swift in Sources */,
+				6EF2C2DF216F2E5400FB8F7F /* HomePageTableViewController.swift in Sources */,
+				6ED321BC216EDD190053A90E /* PromptInformation.swift in Sources */,
+				6ED321BB216EDD190053A90E /* LCycleADView.swift in Sources */,
+				6ED321B8216EDD190053A90E /* fileExtence.swift in Sources */,
+				6EF2C2E4216F2F8300FB8F7F /* HomePageShufflingImgTableViewCell.swift in Sources */,
 				6ED32189216EDCC30053A90E /* TaoBao.xcdatamodeld in Sources */,
+				6EF2C2CF216EDF5F00FB8F7F /* MainTabBarViewController.swift in Sources */,
+				6ED321B2216EDD190053A90E /* PickerView.swift in Sources */,
+				6ED321AE216EDD190053A90E /* BaseNewPopView.swift in Sources */,
+				6ED321B9216EDD190053A90E /* GlobalVariable.swift in Sources */,
+				6EF2C2DB216F1A4800FB8F7F /* LoginViewController.swift in Sources */,
+				6ED321B3216EDD190053A90E /* TableCellDelegater.swift in Sources */,
+				6ED321BA216EDD190053A90E /* LateralSpreadsMenuViewController.swift in Sources */,
+				6ED321BD216EDD190053A90E /* UIViewController+LLSwizzle.m in Sources */,
 				6ED32183216EDCC30053A90E /* ViewController.swift in Sources */,
+				6ED321B0216EDD190053A90E /* BaseTableViewController.swift in Sources */,
+				6ED321B5216EDD190053A90E /* tableViewUtils.swift in Sources */,
+				6ED321B4216EDD190053A90E /* TableCellProvider.swift in Sources */,
+				6EF2C2E7216F340F00FB8F7F /* LunBo.swift in Sources */,
+				6ED321BE216EDD190053A90E /* validation.swift in Sources */,
+				6ED321AD216EDD190053A90E /* BaseBottomButtonViewController.swift in Sources */,
 				6ED32181216EDCC30053A90E /* AppDelegate.swift in Sources */,
+				6ED321AF216EDD190053A90E /* BasePopView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,11 +543,13 @@
 		};
 		6ED32193216EDCC50053A90E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98421E3B67005AF76BF6B92B /* Pods-TaoBao.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M3L744C45U;
 				INFOPLIST_FILE = TaoBao/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,11 +563,13 @@
 		};
 		6ED32194216EDCC50053A90E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BBAFE225CBFCEA174CC8483E /* Pods-TaoBao.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M3L744C45U;
 				INFOPLIST_FILE = TaoBao/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
