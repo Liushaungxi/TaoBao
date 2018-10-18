@@ -22,6 +22,7 @@ pod 'WMPlayer'
 pod 'ZFPlayer' , '2.1.6'
 #pod 'VIMediaCache'
 pod 'FSCalendar'
+pod 'LeanCloud'
 pod 'CocoaAsyncSocket', '7.6.1'
 pod 'SwiftRichString'
 end

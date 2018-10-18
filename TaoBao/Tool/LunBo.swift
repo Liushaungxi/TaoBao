@@ -11,7 +11,7 @@ import UIKit
 class LunBo: UIView,UIScrollViewDelegate {
 
     var scrollView = UIScrollView()
-    var images = [#imageLiteral(resourceName: "a01"),#imageLiteral(resourceName: "a02"),#imageLiteral(resourceName: "a03"),#imageLiteral(resourceName: "a02")]
+    var images = [Any]()
     let imageView1 = UIImageView()
     let imageView2 = UIImageView()
     let imageView3 = UIImageView()
@@ -22,7 +22,15 @@ class LunBo: UIView,UIScrollViewDelegate {
     var buttons = [UIButton]()
     let buttonsView = UIView()
     var buttonIndex = 0
+    var clickBlock:((Int)->Void)?
+    var isImgOrUrlImg = false
+    func reInitImgs(){
+        
+    }
     func initView(tempHight:CGFloat){
+        if images is [String]{
+            isImgOrUrlImg = true
+        }
         hight = tempHight
         index = images.count * 2
         
@@ -78,7 +86,20 @@ class LunBo: UIView,UIScrollViewDelegate {
             }
         }
         
+        imageView2.isUserInteractionEnabled = true
+        let tap = UITapGestureRecognizer(target: self, action: #selector(tapAction))
+        tap.numberOfTouchesRequired = 1
+        tap.numberOfTapsRequired = 1
+        imageView2.addGestureRecognizer(tap)
+        
         imageChange()
+        initTimer()
+    }
+    @objc func tapAction(){
+        clickBlock?(index%images.count)
+    }
+    func initTimer(){
+        lunBoTimer.invalidate()
         lunBoTimer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
         RunLoop.current.add(lunBoTimer, forMode: .commonModes)
     }
@@ -109,9 +130,16 @@ class LunBo: UIView,UIScrollViewDelegate {
                 buttonIndex = images.count - 1
             }
         }
-        imageView1.image = images[(index - 1)%images.count]
-        imageView2.image = images[index%images.count]
-        imageView3.image = images[(index + 1)%images.count]
+        if isImgOrUrlImg{
+            imageView1.kf.setImage(with: (images[(index - 1)%images.count] as! String).url())
+            imageView2.kf.setImage(with: (images[index%images.count] as! String).url())
+            imageView3.kf.setImage(with: (images[(index + 1)%images.count] as! String).url())
+        }else{
+            imageView1.image = images[(index - 1)%images.count] as? UIImage
+            imageView2.image = images[index%images.count] as? UIImage
+            imageView3.image = images[(index + 1)%images.count] as? UIImage
+        }
+        
         for button in buttons {
             button.backgroundColor = UIColor.white
         }
@@ -120,8 +148,7 @@ class LunBo: UIView,UIScrollViewDelegate {
     }
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         imageChange()
-        lunBoTimer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
-        RunLoop.current.add(lunBoTimer, forMode: .commonModes)
+        initTimer()
     }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

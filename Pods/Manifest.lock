@@ -21,6 +21,10 @@ PODS:
   - HandyJSON (4.1.1)
   - IQKeyboardManager (6.1.1)
   - Kingfisher (4.8.1)
+  - LeanCloud (11.0.1):
+    - LeanCloud/Storage (= 11.0.1)
+  - LeanCloud/Storage (11.0.1):
+    - Alamofire (~> 4.7)
   - Masonry (1.1.0)
   - MJRefresh (3.1.15.6)
   - NVActivityIndicatorView (4.0.1):
@@ -48,6 +52,7 @@ DEPENDENCIES:
   - HandyJSON (= 4.1.1)
   - IQKeyboardManager
   - Kingfisher
+  - LeanCloud
   - MJRefresh
   - PKHUD
   - SKPhotoBrowser
@@ -70,6 +75,7 @@ SPEC REPOS:
     - HandyJSON
     - IQKeyboardManager
     - Kingfisher
+    - LeanCloud
     - Masonry
     - MJRefresh
     - NVActivityIndicatorView
@@ -93,6 +99,7 @@ SPEC CHECKSUMS:
   HandyJSON: 3a3de917c4118767ffe41c29b5acba23409649f4
   IQKeyboardManager: 79c57795f5c2408d259d37b9da2ed07efcbb5225
   Kingfisher: 868c1149679a7ab6869be118faa9b5aed154aaf0
+  LeanCloud: f9776746a4cd62bdb441f2768017a91c9516d219
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJRefresh: 0efa19656679d70a0f47cbe76e56c2271fe53a97
   NVActivityIndicatorView: 77ed6d7b571643e24899e7858bf9ae2ee4c21f31
@@ -105,6 +112,6 @@ SPEC CHECKSUMS:
   XLPagerTabStrip: c908b17cbf42fcd2598ee1adfc49bae25444d88a
   ZFPlayer: 833cb3974b619bfd01a0ec1ebaabfe6f629e85b4
 
-PODFILE CHECKSUM: d3564708bc20d57aa95a9b87712058977d2a6d75
+PODFILE CHECKSUM: 3f3eec3d0ecb576ba1540e8d222268cc1b13e46d
 
 COCOAPODS: 1.5.3

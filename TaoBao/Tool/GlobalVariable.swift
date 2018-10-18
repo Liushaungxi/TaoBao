@@ -43,8 +43,7 @@ extension Dictionary{
 //通过kf用String下载图片
 extension String{
     func url() -> URL {
-        let temp = "http://192.168.1.220:8080" + self
-        return URL.init(string: temp)!
+        return URL.init(string: self) ?? URL.init(string: "fasdfew")!
     }
 }
 let color = UIColor.init(red: 23/255, green: 191/255, blue: 147/255, alpha: 1)

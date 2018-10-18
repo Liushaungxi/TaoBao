@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import LeanCloud
 let mainVc = MainViewController()
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        LeanCloud.initialize(applicationID: "rJ1T8xU9IR4WX1t4FJcqYIhM-gzGzoHsz", applicationKey: "ygF8a2hzhJg48ieO1NlnyQSf")
         window?.rootViewController = mainVc
         window?.makeKeyAndVisible()
         return true

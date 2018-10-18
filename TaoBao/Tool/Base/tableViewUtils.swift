@@ -115,8 +115,11 @@ class TableViewProvider: NSObject, UITableViewDelegate, UITableViewDataSource {
         tableView.separatorStyle = .none
 
     }
+    var scrollDidEndDraggingBlock:(()->Void)?
     var customSections = [TableViewSection]()
-    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        scrollDidEndDraggingBlock?()
+    }
     func reload() {
         customTableView.reloadData()
     }
