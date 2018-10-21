@@ -67,8 +67,10 @@
                     </view>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="fVH-px-hKH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="5Si-lZ-LOm"/>
                     <constraint firstAttribute="trailing" secondItem="qej-Jl-w6Z" secondAttribute="trailing" constant="20" id="6L3-lB-bXr"/>
                     <constraint firstItem="s3i-Qp-7vW" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="CGs-fE-Ne7"/>
+                    <constraint firstAttribute="bottom" secondItem="fVH-px-hKH" secondAttribute="bottom" id="Kv2-6l-9wN"/>
                     <constraint firstItem="qej-Jl-w6Z" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="LnV-sp-qUN"/>
                     <constraint firstItem="s3i-Qp-7vW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="UO1-fF-tLp"/>
                     <constraint firstItem="fVH-px-hKH" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="fUX-Wx-R76"/>

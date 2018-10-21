@@ -11,13 +11,13 @@ import UIKit
 class BaseBottomButtonViewController: UIViewController {
 
     let viewBox = UIView()
-    let bottonButton = UIButton(type: UIButtonType.custom)
+    let bottonButton = UIButton(type: UIButton.ButtonType.custom)
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addSubview(bottonButton)
         bottonButton.backgroundColor = UIColor.white
         bottonButton.layer.borderWidth = 1
-        bottonButton.setTitleColor(UIColor.darkGray, for: UIControlState.normal)
+        bottonButton.setTitleColor(UIColor.darkGray, for: UIControl.State.normal)
         bottonButton.snp.makeConstraints { (make) in
             make.bottom.left.right.equalToSuperview()
             make.height.equalTo(40)

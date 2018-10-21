@@ -13,6 +13,15 @@ class HomePageTableViewController: UITableViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         provider = TableViewProvider.init(tableView)
+        addScrollAction()
+        provider.registerCells(cells: [HomePageShufflingImgTableViewCell.self,HomePageNavigationTableViewCell.self,HomePageNewsTableViewCell.self,HomePageNewFreshTableViewCell.self,BlankTableViewCell.self,HomePageSnapTableViewCell.self,HomePageTitleTableViewCell.self,HomePageLiveStreamingTableViewCell.self,HomePageFormFourTableViewCell.self,HomePageLiveStudyTableViewCell.self,HomePageGoodStorTableViewCell.self,HomePageFormThreeTableViewCell.self,HomePageYouLikeTableViewCell.self])
+//        navigationController?.navigationBar.alpha = 1
+//        let nibView = Bundle.main.loadNibNamed("HomePageBarItemView", owner: self, options: nil)
+//        let navgationBarView = nibView?.first as? HomePageBarItemView ?? UIView()
+//        navigationController?.navigationBar.addFullView(view: navgationBarView)
+        initCell()
+    }
+    func addScrollAction(){
         provider.scrollDidEndDraggingBlock = {
             if self.lunBoTableViewCells[0] is HomePageShufflingImgTableViewCell && self.lunBoTableViewCells[1] is HomePageNewsTableViewCell{
                 let cell1 = self.lunBoTableViewCells[0] as! HomePageShufflingImgTableViewCell
@@ -31,8 +40,6 @@ class HomePageTableViewController: UITableViewController{
                 }
             }
         }
-        provider.registerCells(cells: [HomePageShufflingImgTableViewCell.self,HomePageNavigationTableViewCell.self,HomePageNewsTableViewCell.self,HomePageNewFreshTableViewCell.self,BlankTableViewCell.self,HomePageSnapTableViewCell.self,HomePageTitleTableViewCell.self,HomePageLiveStreamingTableViewCell.self,HomePageFormFourTableViewCell.self,HomePageLiveStudyTableViewCell.self,HomePageGoodStorTableViewCell.self,HomePageFormThreeTableViewCell.self,HomePageYouLikeTableViewCell.self])
-        initCell()
     }
     var lunBoTableViewCells = [UITableViewCell]()
     func initCell() {
@@ -56,6 +63,7 @@ class HomePageTableViewController: UITableViewController{
             section.addRow(BlankTableViewCell.self)
             //淘鲜达
             section.addRow(HomePageNewFreshTableViewCell.self, { (cell) in
+                cell.title = "淘鲜达"
             }, nil)
             section.addRow(BlankTableViewCell.self)
             //抢购

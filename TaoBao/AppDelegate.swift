@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         LeanCloud.initialize(applicationID: "rJ1T8xU9IR4WX1t4FJcqYIhM-gzGzoHsz", applicationKey: "ygF8a2hzhJg48ieO1NlnyQSf")
         window?.rootViewController = mainVc
         window?.makeKeyAndVisible()

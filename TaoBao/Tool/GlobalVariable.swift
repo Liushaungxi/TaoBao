@@ -54,14 +54,7 @@ func todayTime() -> Int{
     let timeStamp = Int(timeInterval)
     return timeStamp
 }
-//把图片转化为Data,并压缩
-extension UIImage{
-    var JPGData:Data{
-        let newImage = UIImage(cgImage: self.cgImage!)
-        let data:Data = UIImageJPEGRepresentation(newImage, 0.7)!
-        return data
-    }
-}
+
 extension Double{
     //保留小数
     var reserve1f:String{
@@ -158,16 +151,16 @@ extension Array{
 extension UIViewController{
     //添加子视图
     func addMyChidVc(_ vc:UIViewController, box:UIView) {
-        vc.willMove(toParentViewController: self)
+        vc.willMove(toParent: self)
         box.addSubview(vc.view)
         vc.view.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
         }
-        self.addChildViewController(vc)
-        vc.didMove(toParentViewController: self)
+        self.addChild(vc)
+        vc.didMove(toParent: self)
     }
     func addMyChidVCs(_ vc:UIViewController, box:UIView,i:Int) {
-        vc.willMove(toParentViewController: self)
+        vc.willMove(toParent: self)
         box.addSubview(vc.view)
         vc.view.snp.makeConstraints { (make) in
             make.bottom.top.equalToSuperview()
@@ -177,8 +170,8 @@ extension UIViewController{
             make.width.equalTo(UIScreen.main.bounds.width)
             //make.height.equalTo(200)
         }
-        self.addChildViewController(vc)
-        vc.didMove(toParentViewController: self)
+        self.addChild(vc)
+        vc.didMove(toParent: self)
     }
     //页面跳转
     func puchVC(vc:UIViewController){

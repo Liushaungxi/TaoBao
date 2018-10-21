@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import LeanCloud
 class HomePageNewFreshTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleImage: UIImageView!
@@ -18,11 +18,40 @@ class HomePageNewFreshTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-    func initCell(titleImg:UIImage,titleText:String,contentText:String,exampleImage:UIImage){
-        titleImage.image = titleImg
-        titleLabel.text = titleText
-        contentLabel.text = contentText
-        exampleImg.image = exampleImage
+    var data = KfLiveStreamingCellData(){
+        didSet{
+            initData()
+        }
+    }
+    func initData(){
+        titleLabel.text = data.title
+        contentLabel.text = data.subtitle
+        exampleImg.kf.setImage(with: data.img.url.url())
+    }
+    var tempTitle = ""
+    var title = ""{
+        didSet{
+            if title != tempTitle{
+                getData()
+            }
+        }
+    }
+    func getData(){
+        tempTitle = title
+        let query = LCQuery(className: "KfLiveStreamingCellData")
+        query.whereKey("supers", .equalTo(title))
+        query.find { (result) in
+            switch result{
+            case .success(let objects):
+                for item in objects{
+                    if let netModel = KfLiveStreamingCellData.deserialize(from: item.jsonString){
+                        self.data = netModel
+                    }
+                }
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

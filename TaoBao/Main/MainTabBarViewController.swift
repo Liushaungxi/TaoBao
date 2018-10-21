@@ -16,6 +16,7 @@ class MainTabBarViewController: UITabBarController {
         tabBar.tintColor = UIColor.red
         let vc1 = HomePageTableViewController()
         var nav1 = UINavigationController()
+        nav1.navigationBar.isTranslucent = false
         nav1 = UINavigationController(rootViewController: vc1)
         nav1.tabBarItem = item1
         
@@ -38,7 +39,6 @@ class MainTabBarViewController: UITabBarController {
         let nav5 = UINavigationController(rootViewController: vc5)
         let item5 = UITabBarItem(title: "我的淘宝", image: #imageLiteral(resourceName: "首页"), tag: 4)
         nav5.tabBarItem = item5
-        
         self.viewControllers = [nav1,nav2,nav3,nav4,nav5]
     }
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {

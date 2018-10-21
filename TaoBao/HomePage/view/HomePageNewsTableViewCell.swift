@@ -43,7 +43,7 @@ class HomePageNewsTableViewCell: UITableViewCell {
     func initTimer(){
         lunboTimer.invalidate()
         lunboTimer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(lunBoAction), userInfo: nil, repeats: true)
-        RunLoop.current.add(lunboTimer, forMode: .commonModes)
+        RunLoop.current.add(lunboTimer, forMode: RunLoop.Mode.common)
     }
     @objc func lunBoAction(){
         UIView.animate(withDuration: 0.3) {

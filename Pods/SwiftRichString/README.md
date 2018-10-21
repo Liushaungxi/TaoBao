@@ -1,5 +1,5 @@
 <p align="center" >
-<img src="https://raw.githubusercontent.com/malcommac/SwiftRichString/release/2.0.0/SwiftRichString.png" width=300px alt="SwiftRichString" title="SwiftRichString">
+<img src="https://raw.githubusercontent.com/malcommac/SwiftRichString/master/SwiftRichString.png" width=300px alt="SwiftRichString" title="SwiftRichString">
 </p>
 
 [![Version](https://img.shields.io/cocoapods/v/SwiftRichString.svg?style=flat)](http://cocoadocs.org/docsets/SwiftRichString) [![License](https://img.shields.io/cocoapods/l/SwiftRichString.svg?style=flat)](http://cocoadocs.org/docsets/SwiftRichString) [![Platform](https://img.shields.io/cocoapods/p/SwiftRichString.svg?style=flat)](http://cocoadocs.org/docsets/SwiftRichString)
@@ -133,7 +133,7 @@ Other info:
 
 ### Versions
 
-- **SwiftRichString 2.x branch (current)**. The latest version is [2.0.0](https://github.com/malcommac/SwiftRichString/releases/tag/2.0.0).
+- **SwiftRichString 2.x branch (current)**. The latest version is [2.0.2](https://github.com/malcommac/SwiftRichString/releases/tag/2.0.2).
 - **SwiftRichString 1.x branch (supported)**. Use [1.1.0 tag](https://github.com/malcommac/SwiftRichString/releases/tag/1.1.0). Its compatible with Swift 4.x.
 - **Swift 3.x (no longer mantained)**. Use [0.9.1 release](https://github.com/malcommac/SwiftRichString/releases/tag/0.9.10).
 
@@ -487,6 +487,7 @@ The following properties are available:
 | font                          | `FontConvertible`                       | font used in text                                                                                                                          | 
 | color                         | `ColorConvertible`                      | foreground color of the text                                                                                                               | 
 | backColor                     | `ColorConvertible`                      | background color of the text                                                                                                               | 
+| shadow                     | `NSShadow`                      | shadow effect of the text                                                                                                             | 
 | underline                     | `(NSUnderlineStyle?,ColorConvertible?)` | underline style and color (if color is nil foreground is used)                                                                             | 
 | strikethrough                 | `(NSUnderlineStyle?,ColorConvertible?)` | strikethrough style and color (if color is nil foreground is used)                                                                         | 
 | baselineOffset                | `Float`                                 | character’s offset from the baseline, in point                                                                                             | 

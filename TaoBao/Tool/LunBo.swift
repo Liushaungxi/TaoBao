@@ -66,7 +66,7 @@ class LunBo: UIView,UIScrollViewDelegate {
             let tempButton = UIButton(type: .custom)
             tempButton.backgroundColor = UIColor.white
             tempButton.tag = index + 1
-            tempButton.addTarget(self, action: #selector(clickButton(_ :)), for: UIControlEvents.touchUpInside)
+            tempButton.addTarget(self, action: #selector(clickButton(_ :)), for: UIControl.Event.touchUpInside)
             tempButton.layer.cornerRadius = 5
             buttons.append(tempButton)
         }
@@ -101,7 +101,7 @@ class LunBo: UIView,UIScrollViewDelegate {
     func initTimer(){
         lunBoTimer.invalidate()
         lunBoTimer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
-        RunLoop.current.add(lunBoTimer, forMode: .commonModes)
+        RunLoop.current.add(lunBoTimer, forMode: RunLoop.Mode.common)
     }
     override init(frame: CGRect) {
         super.init(frame: frame)

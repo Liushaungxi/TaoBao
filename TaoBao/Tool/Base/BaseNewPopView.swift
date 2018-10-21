@@ -41,7 +41,7 @@ class BaseNewPopView:UIViewController {
     func showUp() -> Void {
         let window = UIWindow()
         window.backgroundColor = UIColor.clear
-        window.windowLevel = UIWindowLevelAlert
+        window.windowLevel = UIWindow.Level.alert
         showWindow = window
         showWindow.rootViewController = self
         
@@ -65,7 +65,7 @@ class BaseNewPopView:UIViewController {
             return
         }
         DispatchQueue.main.async {
-            self.showWindow?.windowLevel = UIWindowLevelNormal
+            self.showWindow?.windowLevel = UIWindow.Level.normal
             self.showWindow?.resignKey()
             if let hasWindow = UIApplication.shared.delegate?.window {
                 hasWindow?.makeKeyAndVisible()
@@ -101,7 +101,7 @@ class BaseNewPopView:UIViewController {
         
         let positAnimate = CABasicAnimation(keyPath: "position")
         positAnimate.duration = 0.2
-        positAnimate.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        positAnimate.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
         positAnimate.fromValue = newCenter
         positAnimate.toValue = coverView.center
         coverView.layer.add(positAnimate, forKey: "positAnimate")

@@ -152,7 +152,7 @@ class TableCellProvider<T:UITableViewCell>:NSObject, TableCellProviderProtocol {
 extension UITableView {
     func autoHeight(_ value:CGFloat = 90) {
         self.estimatedRowHeight = value
-        self.rowHeight = UITableViewAutomaticDimension
+        self.rowHeight = UITableView.automaticDimension
         self.tableFooterView = UIView()
     }
 }

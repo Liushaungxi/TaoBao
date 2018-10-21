@@ -38,6 +38,9 @@ import UIKit
 /// `StyleGroup` is a container for named `Style` instances.
 /// You need of it to render a text using html-style tags.
 public class StyleGroup: StyleProtocol {
+	
+	/// Does not return anything for groups.
+	public var fontData: FontData? = nil
 
 	/// TagAttribute represent a single tag in a source string after the text is parsed.
 	private class TagAttribute {
@@ -80,9 +83,11 @@ public class StyleGroup: StyleProtocol {
 	
 	/// Return all attributes merge of each single `Style` of the group.
 	/// Attributes are reported in order of the insertion regardeless the associated name.
-	public var attributes: [NSAttributedStringKey : Any] {
-		var composedAttributes: [NSAttributedStringKey: Any] = [:]
-		self.styles.enumerated().forEach { (_,style) in
+	public var attributes: [NSAttributedString.Key : Any] {
+		var composedAttributes: [NSAttributedString.Key: Any] = [:]
+		self.styles.enumerated().forEach { (arg) in
+			
+			let (_, style) = arg
 			composedAttributes.merge(style.attributes, uniquingKeysWith: { (_, new) in return new })
 		}
 		return composedAttributes
@@ -177,13 +182,7 @@ public class StyleGroup: StyleProtocol {
 		let str = attrStr.string
 		
 		// Apply default base style if specified
-		if let baseStyle = self.baseStyle {
-			if adding {
-				attrStr.addAttributes(baseStyle.attributes, range: NSMakeRange(0, attrStr.length))
-			} else {
-				attrStr.setAttributes(baseStyle.attributes, range: NSMakeRange(0, attrStr.length))
-			}
-		}
+		self.baseStyle?.set(to: attrStr, range: nil)
 		
 		// Parse tags
 		if let regex = try? NSRegularExpression(pattern: tagRegex, options: .dotMatchesLineSeparators) {
@@ -210,9 +209,9 @@ public class StyleGroup: StyleProtocol {
 				}
 			}
 			
-			func removeTag(index: Int) {
+			func removeTag(index: Int, with str: String = "") {
 				let tag = tagQueue[index]
-				attrStr.replaceCharacters(in: tag.range, with: NSAttributedString())
+				attrStr.replaceCharacters(in: tag.range, with: NSAttributedString(string: str))
 				let nextIndex = index+1
 				if nextIndex < tagQueue.count {
 					for tIndex in nextIndex..<tagQueue.count {
@@ -225,6 +224,10 @@ public class StyleGroup: StyleProtocol {
 			for index in 0..<tagQueue.count {
 				let tag = tagQueue[index]
 				if tag.isOpeningTag {
+					guard tag.name != "br" else {
+						removeTag(index: index, with: "\n")
+						continue
+					}
 					guard let attribute = self.styles[tag.name] else { continue }
 					
 					removeTag(index: index)
@@ -235,7 +238,9 @@ public class StyleGroup: StyleProtocol {
 						
 						let location = tag.range.location
 						let length = closingTag.range.location-location
-						attrStr.addAttributes(attribute.attributes, range: NSRange(location: location, length: length))
+						let range = NSRange(location: location, length: length)
+						attribute.fontData?.addAttributes(to: attrStr, range: range)
+						attrStr.addAttributes(attribute.attributes, range: range)
 					}
 				}
 				
@@ -254,7 +259,7 @@ public extension Array where Array.Element == StyleProtocol {
 	///
 	/// - Returns: merged style
 	public func mergeStyle() -> Style {
-		var attributes: [NSAttributedStringKey:Any] = [:]
+		var attributes: [NSAttributedString.Key:Any] = [:]
 		self.forEach { attributes.merge($0.attributes, uniquingKeysWith: { (_, new) in return new }) }
 		return Style(dictionary: attributes)
 	}

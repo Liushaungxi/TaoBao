@@ -35,35 +35,45 @@ public typealias AttributedString = NSMutableAttributedString
 public protocol StyleProtocol: class {
 	
 	/// Return the attributes of the style in form of dictionary `NSAttributedStringKey`/`Any`.
-	var attributes: [NSAttributedStringKey : Any] { get }
+	var attributes: [NSAttributedString.Key : Any] { get }
+	
+	/// Font unique attributes dictionary.
+	var fontData: FontData? { get }
 	
 	func set(to source: String, range: NSRange?) -> AttributedString
+	
 	func add(to source: AttributedString, range: NSRange?) -> AttributedString
+	
+	@discardableResult
 	func set(to source: AttributedString, range: NSRange?) -> AttributedString
+	
+	@discardableResult
 	func remove(from source: AttributedString, range: NSRange?) -> AttributedString
 }
 
 public extension StyleProtocol {
 	
 	func set(to source: String, range: NSRange?) -> AttributedString {
-		guard let range = range else { // apply to entire string
-			return NSMutableAttributedString(string: source, attributes: self.attributes)
-		}
 		let attributedText = NSMutableAttributedString(string: source)
-		attributedText.setAttributes(self.attributes, range: range)
+		self.fontData?.addAttributes(to: attributedText, range: nil)
+		attributedText.addAttributes(self.attributes, range: (range ?? NSMakeRange(0, attributedText.length)))
 		return attributedText
 	}
 	
 	func add(to source: AttributedString, range: NSRange?) -> AttributedString {
+		self.fontData?.addAttributes(to: source, range: range)
 		source.addAttributes(self.attributes, range: (range ?? NSMakeRange(0, source.length)))
 		return source
 	}
 	
+	@discardableResult
 	func set(to source: AttributedString, range: NSRange?) -> AttributedString {
-		source.setAttributes(self.attributes, range: (range ?? NSMakeRange(0, source.length)))
+		self.fontData?.addAttributes(to: source, range: range)
+		source.addAttributes(self.attributes, range: (range ?? NSMakeRange(0, source.length)))
 		return source
 	}
 	
+	@discardableResult
 	func remove(from source: AttributedString, range: NSRange?) -> AttributedString {
 		self.attributes.keys.forEach({
 			source.removeAttribute($0, range: (range ?? NSMakeRange(0, source.length)))

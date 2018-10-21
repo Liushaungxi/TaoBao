@@ -81,8 +81,8 @@ class LateralSpreadsMenuViewController: UIViewController {
             mainVc.view.addGestureRecognizer(tapRecognizer)
             menuVc = tempVc
             view.insertSubview(menuVc!.view, at: 0)
-            addChildViewController(menuVc!)
-            menuVc!.didMove(toParentViewController: self)
+            addChild(menuVc!)
+            menuVc!.didMove(toParent: self)
         }
     }
     var tapRecognizer = UITapGestureRecognizer()
@@ -138,7 +138,7 @@ extension UIScrollView{
             let pan = sender
             let point = pan.translation(in: self)
             let state = sender.state
-            if UIGestureRecognizerState.began == state || UIGestureRecognizerState.possible == state{
+            if UIGestureRecognizer.State.began == state || UIGestureRecognizer.State.possible == state{
                 let location = sender.location(in: self)
                 let temp1 = location.x
                 let temp2 = UIScreen.main.bounds.width
